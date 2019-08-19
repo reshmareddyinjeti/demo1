@@ -13,6 +13,7 @@ public class CategoriesStepDef {
     @When("^I click Men$")
     public void iClickMen() {
         catogories.menLink();
+
     }
 
     @And("^I select a customer \"([^\"]*)\"$")

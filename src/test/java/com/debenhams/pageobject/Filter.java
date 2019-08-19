@@ -16,8 +16,10 @@ public class Filter extends DriverFactory {
 
     @FindBy(linkText = "Men")
     private WebElement menlink;
+
     @FindBy(linkText = "All shoes & boots")
     private WebElement sublink;
+
     @FindBy(css="psp-header-container")
     private WebElement pageTitleHeader;
 

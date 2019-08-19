@@ -23,6 +23,8 @@ public class SortBy extends DriverFactory {
     private List<WebElement> priceAmount;
 
     public void moveToSort(){
+
+
        // SortBy.click();
        // Actions action=new Actions(driver) ;
        // action.moveToElement(SortBy).build().perform();
@@ -38,7 +40,9 @@ public class SortBy extends DriverFactory {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        List<Double> collectedSort=new ArrayList<>();
+        List<
+
+                Double> collectedSort=new ArrayList<>();
         for (WebElement sortByWebElement: priceAmount){
             String sortInString=sortByWebElement.getText();
             System.out.println(collectedSort);

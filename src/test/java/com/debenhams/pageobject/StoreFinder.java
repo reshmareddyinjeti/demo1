@@ -17,6 +17,8 @@ public class StoreFinder extends DriverFactory {
     public void storeFinder(String city){
         StoreFinderLink.click();
         City.sendKeys(city);
+
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

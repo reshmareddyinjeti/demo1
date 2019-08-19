@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class Search extends DriverFactory {
 
     public static String searchProduct;
+
     @FindBy(css = ".dbh-search-input")
     private WebElement searchTextBox;
 
@@ -21,7 +22,8 @@ public class Search extends DriverFactory {
 
 
     //assertion
-    public String getHomePageUrl() {
+    public String getHomePageUrl()
+    {
         return driver.getCurrentUrl();
     }
 }
