@@ -19,6 +19,7 @@ public class Search extends DriverFactory {
         magnifierGlass.click();
     }
 
+
     //assertion
     public String getHomePageUrl() {
         return driver.getCurrentUrl();

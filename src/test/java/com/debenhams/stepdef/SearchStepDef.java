@@ -25,4 +25,9 @@ public class SearchStepDef {
        String actual= search.getHomePageUrl();
         assertThat("home page not displayed",actual, Matchers.startsWith("https"));
     }
+
+    @When("^I search for a \"([^\"]*)\"$")
+    public void iSearchForA(String item)  {
+        search.doSearch(item);
+    }
 }

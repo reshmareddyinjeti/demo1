@@ -5,10 +5,15 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
 import java.io.IOException;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalToIgnoringWhiteSpace;
+import static org.hamcrest.Matchers.is;
 
 public class FilterStepDef {
     private Filter filter=new Filter();
@@ -23,6 +28,8 @@ public class FilterStepDef {
     }
     @Then("^I able to see the product$")
     public void iAbleToSeeTheProduct() {
+       // String actual1=filter.header();
+        //assertThat("page header is not as expected ",actual1,is(equalToIgnoringWhiteSpace("Men's footwear")));
     }
 
     @Then("^I take a Screen shot$")

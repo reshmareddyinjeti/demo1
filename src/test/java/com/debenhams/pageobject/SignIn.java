@@ -18,16 +18,23 @@ public class SignIn extends DriverFactory {
 
     @FindBy(css=".pw-button__inner")
     private WebElement signin;
+
+    @FindBy(css=".t-super-header--username")
+    private WebElement sandeepHeader;
+
     public void sign(){
         account.click();
         email.sendKeys("pundarikakshareddy555@gmail.com ");
         pass.sendKeys("sandipani555");
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+           e.printStackTrace();
         }
         signin.click();
+    }
+    public String header(){
+       return sandeepHeader.getText();
     }
 }
 

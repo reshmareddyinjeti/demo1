@@ -9,3 +9,4 @@ Feature: search
     When  I click the store finder
     And I enter the city "Hounslow"
     Then I able to see the store location
+

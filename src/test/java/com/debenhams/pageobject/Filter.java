@@ -18,6 +18,8 @@ public class Filter extends DriverFactory {
     private WebElement menlink;
     @FindBy(linkText = "All shoes & boots")
     private WebElement sublink;
+    @FindBy(css="psp-header-container")
+    private WebElement pageTitleHeader;
 
     public void customerSelectedLink() {
         Actions actions = new Actions(driver);
@@ -25,7 +27,7 @@ public class Filter extends DriverFactory {
     }
     public void selectedLink() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -36,5 +38,13 @@ sublink.click();
     {
         File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(src,new File("/Users/sandeep/Downloads/com.debenhams/src/test/java/com/debenhams/Debenhams.png"));
+    }
+    public String header()
+    {try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+        return pageTitleHeader.getText();
     }
 }

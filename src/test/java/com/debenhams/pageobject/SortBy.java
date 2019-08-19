@@ -16,19 +16,21 @@ import java.util.List;
 
 public class SortBy extends DriverFactory {
    // public static String expectedCustomersort;
-    @FindBy(css=".u-color-neutral-70")
+    @FindBy(css=".dbh-sort")
     private WebElement SortBy;
+
     @FindBy (css=".dbh-price")
     private List<WebElement> priceAmount;
 
     public void moveToSort(){
-        SortBy.click();
+       // SortBy.click();
        // Actions action=new Actions(driver) ;
        // action.moveToElement(SortBy).build().perform();
     }
     public void sortBy(String customerSelectedPrice) {
         Select select=new Select(SortBy);
         select.selectByVisibleText(customerSelectedPrice);
+        SortBy.click();
     }
     public List<Double> getAllSortedProductOnPrice(){
         try {
